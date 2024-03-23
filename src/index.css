@@ -75,3 +75,8 @@ body {
   /* --text-secondary-color: var(--dark-mode-text-secondary-color); */
   /* --background-secondary-color: var(--dark-mode-bg-secondary-color); */
 }
+
+.temp {
+  background: var(--hover-color);
+  transition: height 3s;
+}

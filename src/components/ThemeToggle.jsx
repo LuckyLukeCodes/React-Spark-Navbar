@@ -18,10 +18,12 @@ const ThemeToggle = () => {
   };
   return (
     <div
-      className={`flex w-20 rounded-3xl border-2 border-slate-200 bg-slate-200 shadow-sm shadow-indigo-200 transition-transform delay-300 ease-linear dark:border-indigo-400 dark:bg-indigo-400 dark:shadow-indigo-400 ${isDarkTheme ? "justify-start" : "justify-end"}`}
+      className={`ml-7 flex w-14 rounded-3xl border-2 border-slate-200 bg-slate-200 shadow-sm shadow-indigo-200 
+       dark:border-indigo-400 dark:bg-indigo-400 dark:shadow-indigo-400
+      ${isDarkTheme ? "justify-start" : "justify-end"}`}
     >
       <button
-        className="rounded-full border-2 border-indigo-700 bg-indigo-700 p-2 text-base font-bold text-[--text-color]"
+        className="rounded-full border-2 border-indigo-700 bg-indigo-700 p-1 text-base font-bold text-[--text-color]"
         onClick={() => {
           toggleDarkTheme();
         }}

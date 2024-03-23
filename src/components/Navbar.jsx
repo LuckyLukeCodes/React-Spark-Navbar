@@ -1,31 +1,32 @@
 import lightning from "../assets/images/lightning.png";
 import NavbarList from "./NavbarList";
-import SmallNavbarList from "./SmallNavbarList";
-import ThemeToggle from "./ThemeToggle";
 import { useState } from "react";
 import MenuButton from "./MenuButton";
 
 const Navbar = () => {
   const [menuBtnClicked, setMenuBtnClicked] = useState(false);
-  const handleClickForSmallNav = () => {
+  const handleMenuBtnClicked = () => {
     setMenuBtnClicked(!menuBtnClicked);
   };
   return (
-    <nav className="flex items-center justify-between px-4 py-3 shadow-lg ">
-      <div className="flex items-center gap-12">
-        <div className="flex items-center">
-          <img src={lightning} alt="" className="" />
-          <span className="electrolize-regular text-3xl font-bold text-indigo-700 dark:text-indigo-300">
+    <nav
+      className={`fixed left-0 top-0 w-full md:shadow-md ${menuBtnClicked ? "" : "shadow-md"}`}
+    >
+      <div className="items-center justify-between bg-white px-7 py-4 md:flex md:px-10 dark:bg-[var(--dark-mode-bg-color)]">
+        <a href="#" className="flex items-center gap-2">
+          <img src={lightning} alt="" className="h-12 w-12" />
+          <span className="electrolize-regular text-3xl font-semibold text-indigo-700 transition-all duration-150 ease-linear dark:text-indigo-100">
             SPARK
           </span>
-        </div>
-        <NavbarList />
-      </div>
-      {menuBtnClicked && <SmallNavbarList />}
-
-      <MenuButton onClick={handleClickForSmallNav} />
-      <div className="hidden md:block">
-        <ThemeToggle />
+        </a>
+        <MenuButton
+          onClick={handleMenuBtnClicked}
+          menuBtnClicked={menuBtnClicked}
+        />
+        <NavbarList
+          menuBtnClicked={menuBtnClicked}
+          handleMenuBtnClicked={handleMenuBtnClicked}
+        />
       </div>
     </nav>
   );

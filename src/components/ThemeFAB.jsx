@@ -18,7 +18,7 @@ const ThemeFAB = () => {
   };
   return (
     <div
-      className="fixed bottom-5 right-5 flex h-16 w-16 cursor-pointer items-center justify-center rounded-full
+      className="fixed bottom-5 right-5 flex h-14 w-14 cursor-pointer items-center justify-center rounded-full
       bg-indigo-700 p-0.5 text-2xl text-[var(--text-color)] shadow-md transition-all ease-in hover:shadow-md hover:shadow-indigo-300 active:scale-95 md:hidden dark:bg-indigo-300"
     >
       <div
