@@ -3,7 +3,7 @@ import ThemeToggle from "./ThemeToggle";
 
 const SmallNavbarList = () => {
   return (
-    <div className="absolute left-0 top-[5.6rem] w-full bg-slate-500 p-4 md:hidden">
+    <div className="absolute left-0 top-[5.6rem] w-full p-4 md:hidden">
       <ul className="flex flex-col items-center justify-center gap-4 ">
         {data.map((item, index) => (
           <li
@@ -14,7 +14,6 @@ const SmallNavbarList = () => {
           </li>
         ))}
       </ul>
-      <ThemeToggle />
     </div>
   );
 };
