@@ -7,13 +7,14 @@ const NavbarList = ({ menuBtnClicked }) => {
       <ul
         className={`absolute left-0 z-[-1] w-full gap-2 pb-12 pl-9 md:static md:z-auto 
                     md:flex md:w-auto md:items-center md:pb-0 md:pl-0 md:shadow-none
-                    ${menuBtnClicked ? "top-20 shadow-md" : "top-[-200px]"} transition-all duration-500 ease-in`}
+                    ${menuBtnClicked ? "top-20 shadow-md shadow-indigo-300/35" : "top-[-200px]"} 
+                    transition-all duration-500 ease-in md:transition-none`}
       >
         {data.map((item, index) => (
           <li
             key={index}
             className="my-7 border-b-[3px] border-transparent text-[1.25rem] font-semibold text-indigo-700 md:my-0 
-                     md:ml-8 md:hover:border-indigo-700 dark:text-indigo-100 dark:md:hover:border-indigo-300"
+                     md:ml-8 md:hover:border-indigo-700 dark:text-indigo-100 dark:md:hover:border-indigo-100"
           >
             <a
               href="#"

@@ -1,21 +1,8 @@
 import { IoSunny, IoMoon } from "react-icons/io5";
-import { useState } from "react";
-
-const checkDefaultTheme = () => {
-  const isDarkTheme = localStorage.getItem("dark") === "true";
-  document.body.classList.toggle("dark", isDarkTheme);
-  return isDarkTheme;
-};
+import { useHomeContext } from "../pages/HomeLayout";
 
 const ThemeToggle = () => {
-  const [isDarkTheme, setIsDarkTheme] = useState(checkDefaultTheme());
-
-  const toggleDarkTheme = () => {
-    const newDarkTheme = !isDarkTheme;
-    setIsDarkTheme(newDarkTheme);
-    document.body.classList.toggle("dark", newDarkTheme);
-    localStorage.setItem("dark", newDarkTheme);
-  };
+  const { isDarkTheme, toggleDarkTheme } = useHomeContext();
   return (
     <div
       className={`ml-7 flex w-14 rounded-3xl border-2 border-slate-200 bg-slate-200 shadow-sm shadow-indigo-200 

@@ -1,13 +1,15 @@
-import Navbar from "./components/Navbar";
-import ThemeFAB from "./components/ThemeFAB";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomeLayout from "./pages/HomeLayout";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomeLayout />,
+  },
+]);
 
 function App() {
-  return (
-    <div className="h-screen dark:bg-[var(--dark-mode-bg-color)]">
-      <Navbar />
-      <ThemeFAB />
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;

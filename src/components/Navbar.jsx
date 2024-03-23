@@ -5,12 +5,14 @@ import MenuButton from "./MenuButton";
 
 const Navbar = () => {
   const [menuBtnClicked, setMenuBtnClicked] = useState(false);
+
   const handleMenuBtnClicked = () => {
     setMenuBtnClicked(!menuBtnClicked);
   };
+
   return (
     <nav
-      className={`fixed left-0 top-0 w-full md:shadow-md ${menuBtnClicked ? "" : "shadow-md"}`}
+      className={`fixed left-0 top-0 w-full shadow-indigo-300/35 md:shadow-md md:shadow-indigo-300/35 ${menuBtnClicked ? "" : "shadow-md"}`}
     >
       <div className="items-center justify-between bg-white px-7 py-4 md:flex md:px-10 dark:bg-[var(--dark-mode-bg-color)]">
         <a href="#" className="flex items-center gap-2">
