@@ -18,7 +18,8 @@ const NavbarList = ({ menuBtnClicked }) => {
           >
             <a
               href="#"
-              className="rounded-2xl p-2 hover:bg-indigo-700 hover:text-indigo-100 md:rounded-none md:p-0 md:hover:bg-white md:hover:text-indigo-700 dark:hover:bg-indigo-100 dark:hover:text-indigo-700 dark:md:hover:bg-transparent dark:md:hover:text-indigo-100 "
+              className="rounded-2xl p-2 hover:bg-indigo-700 hover:text-indigo-100 md:rounded-none md:p-0 md:hover:bg-white md:hover:text-indigo-700 
+                    dark:hover:bg-indigo-100 dark:hover:text-indigo-700 dark:md:hover:bg-transparent dark:md:hover:text-indigo-100 "
             >
               {item.text}
             </a>
